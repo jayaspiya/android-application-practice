@@ -5,12 +5,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="400dp"
     tools:context=".ImageViewActivity">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoOshawott"
+            android:text="Oshawott" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoSnivy"
+            android:text="Snivy" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoTepig"
+            android:text="Tepig" />
+
+        <RadioButton
+            android:id="@+id/rdoPikachu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pikachu" />
+    </RadioGroup>
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:src="@drawable/unknownpokemon"
-    android:scaleType="fitXY"
+    android:id="@+id/ivPokemon"
     />
+<!--    android:scaleType="fitXY"-->
+
 </LinearLayout>
