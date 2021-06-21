@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusBookingResultActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invoice"
+        android:gravity="center"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date"
+        android:layout_marginHorizontal="20dp"
+        />
+    <TextView
+        android:id="@+id/tvReturnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Return Date"
+        android:layout_marginHorizontal="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        >
+        <TextView
+            android:id="@+id/tvDestinationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDestination"
+            android:layout_toRightOf="@id/tvDestinationLabel"
+            android:hint="Destination"
+            />
+        <TextView
+            android:id="@+id/tvCountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDestinationLabel"
+            android:text="No of passenger: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCount"
+            android:layout_toRightOf="@id/tvCountLabel"
+            android:layout_below="@id/tvDestinationLabel"
+            android:hint="0"
+            />
+        <TextView
+            android:id="@+id/tvCostLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCountLabel"
+            android:text="Cost per Ticket: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCost"
+            android:layout_toRightOf="@id/tvCostLabel"
+            android:layout_below="@id/tvCountLabel"
+            android:hint="0"
+            />
+        <TextView
+            android:id="@+id/tvTotalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCost"
+            android:textSize="25dp"
+            android:text="Total: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotal"
+            android:layout_toRightOf="@id/tvTotalLabel"
+            android:layout_below="@id/tvCost"
+            android:textSize="25dp"
+            android:hint="0"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

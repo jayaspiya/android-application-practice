@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:orientation="vertical"
+    tools:context=".BusBookingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Bus Booking System"
+        android:textSize="35dp" />
+    <!--Select Destination Spinner-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destination" />
+
+    <Spinner
+        android:id="@+id/spDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--    Select journey start date-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="dd-mm-yyyy"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnSelectStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="20dp"
+            android:text="Select Start date"
+            android:textSize="10dp" />
+    </RelativeLayout>
+    <!--    Select journey return date-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvReturnDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="dd-mm-yyyy"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnSelectReturnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="20dp"
+            android:text="Select Return date"
+            android:textSize="10dp" />
+    </RelativeLayout>
+    <!--    No of passenger-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPassenger"
+        android:hint="Number of Passenger"
+        android:inputType="number"
+        android:paddingHorizontal="5dp"
+        />
+    <!--    Generate Button-->
+    <Button
+        android:id="@+id/btnBookTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book now"
+        android:layout_gravity="center"/>
+    <!--    Output-->
+</LinearLayout>

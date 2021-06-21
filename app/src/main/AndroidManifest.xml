@@ -11,15 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplicationPractice">
-        <activity android:name=".CountryCapitalResultActivity"></activity>
-        <activity android:name=".CountryCapitalActivity">
+        <activity android:name=".BusBookingResultActivity"></activity>
+        <activity android:name=".BusBookingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ImageViewActivity"></activity>
+        <activity android:name=".CountryCapitalResultActivity" />
+        <activity android:name=".CountryCapitalActivity"></activity>
+        <activity android:name=".ImageViewActivity" />
         <activity android:name=".GridActivity" />
         <activity android:name=".MainActivity" />
     </application>
