@@ -11,11 +11,15 @@ class CountryCapitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_country_capital)
         lvCountry = findViewById(R.id.lvCountry)
-        val countries = arrayOf("India", "Nepal", "UK")
+        val countryCapital = mapOf(
+            "India" to "ND",
+            "Nepal" to "Kathmandu",
+            "UK" to "London",
+        )
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
-            countries
+            countryCapital.keys.toTypedArray()
         )
         lvCountry.adapter = adapter
     }
