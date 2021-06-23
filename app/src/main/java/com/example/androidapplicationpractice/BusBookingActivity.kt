@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.*
 import java.util.*
 
@@ -49,7 +50,11 @@ class BusBookingActivity : AppCompatActivity() {
             selectDate(true)
         }
         btnBookTicket.setOnClickListener {
-            if(etPassenger.text.toString().toInt() < 0){
+            if(TextUtils.isEmpty(etPassenger.text.toString())){
+                etPassenger.requestFocus()
+                etPassenger.error = "Please specify passengers"
+            }
+            else if(etPassenger.text.toString().toInt() < 0){
                 etPassenger.requestFocus()
                 etPassenger.error = "Please specify passengers"
             }
