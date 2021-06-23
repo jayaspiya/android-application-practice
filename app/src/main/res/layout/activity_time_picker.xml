@@ -7,14 +7,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:layout_marginHorizontal="50dp"
+
     tools:context=".TimePickerActivity">
 
+    <AutoCompleteTextView
+        android:id="@+id/acTextView"
+        android:hint="Auto Complete Text Box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <Button
         android:id="@+id/btnSelectTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Time for pickup"
-        android:layout_marginHorizontal="50dp"
         android:layout_gravity="center"
         />
 
@@ -25,4 +32,12 @@
         android:gravity="center"
         android:textSize="35dp"
         android:hint="Selected Time"/>
+
+    <Button
+        android:id="@+id/btnAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Present Time Alert Dialog"
+        android:layout_gravity="center"
+        />
 </LinearLayout>
