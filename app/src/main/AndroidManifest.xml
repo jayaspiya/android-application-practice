@@ -11,18 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplicationPractice">
-        <activity android:name=".FragmentActivity">
+        <activity android:name=".TabLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TimePickerActivity">
+        <activity android:name=".FragmentActivity">
 
         </activity>
+        <activity android:name=".TimePickerActivity"></activity>
         <activity android:name=".BusBookingResultActivity" />
-        <activity android:name=".BusBookingActivity"></activity>
+        <activity android:name=".BusBookingActivity" />
         <activity android:name=".CountryCapitalResultActivity" />
         <activity android:name=".CountryCapitalActivity" />
         <activity android:name=".ImageViewActivity" />
