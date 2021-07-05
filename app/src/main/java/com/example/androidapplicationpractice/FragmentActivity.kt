@@ -22,11 +22,11 @@ class FragmentActivity : AppCompatActivity() {
             }
         }
         btnAreaFragment.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.linearContainer, AreaFragment())
-                addToBackStack(null)
-                commit()
-            }
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.linearContainer, AreaFragment())
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
     }
 }

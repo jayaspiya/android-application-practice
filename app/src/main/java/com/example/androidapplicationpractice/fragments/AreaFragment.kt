@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import com.example.androidapplicationpractice.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +25,9 @@ class AreaFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var etRadius: EditText
+    private lateinit var btnCalc: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,26 +41,16 @@ class AreaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_area, container, false)
+        val view =  inflater.inflate(R.layout.fragment_area, container, false)
+        etRadius = view.findViewById(R.id.etRadius)
+        btnCalc = view.findViewById(R.id.btnCalc)
+        btnCalc.setOnClickListener {
+            val radius = etRadius.text.toString().toInt()
+            val result = 22/7 * radius * radius
+            Toast.makeText(requireActivity(), "$result", Toast.LENGTH_SHORT).show()
+        }
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AreaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AreaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
